@@ -32,6 +32,14 @@ export namespace sample {
          * @returns Promise
          */
         sayHello(request: sample.HelloRequest, metadata?: grpc.Metadata): Observable<sample.HelloReply>;
+
+        /**
+         * Calls DeleteHello.
+         * @param request HelloRequest message or plain object
+         * @param metadata Optional metadata
+         * @returns Promise
+         */
+        deleteHello(request: sample.HelloRequest, metadata?: grpc.Metadata): Observable<google.protobuf.Empty>;
     }
 
     /** Properties of a HelloRequest. */
@@ -62,5 +70,33 @@ export namespace sample {
 
         /** DateTime year */
         year?: (number|null);
+    }
+}
+
+/** Namespace google. */
+export namespace google {
+
+    /** Contains all the RPC service clients. */
+    export interface ClientFactory {
+    }
+
+    /** Builder for an RPC service server. */
+    export interface ServerBuilder {
+    }
+
+    /** Namespace protobuf. */
+    export namespace protobuf {
+
+        /** Contains all the RPC service clients. */
+        export interface ClientFactory {
+        }
+
+        /** Builder for an RPC service server. */
+        export interface ServerBuilder {
+        }
+
+        /** Properties of an Empty. */
+        export interface Empty {
+        }
     }
 }

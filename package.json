@@ -7,6 +7,7 @@
     "dev": "nodemon",
     "start": "node build/index.js",
     "build": "rimraf ./build && tsc",
+    "genproto":"./node_modules/.bin/rxjs-grpc -o src/protoType/grpc-namespaces.ts src/proto/*.proto ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
