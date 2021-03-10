@@ -1,0 +1,23 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+package sample;
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc DeleteHello(HelloRequest) returns (google.protobuf.Empty) {}
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+  DateTime date = 2;
+}
+
+message DateTime {
+  int32 date = 1;
+  int32 month = 2;
+  int32 year = 3;
+}
