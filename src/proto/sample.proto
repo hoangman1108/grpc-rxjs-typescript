@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package sample;
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+  DateTime date = 2;
+}
+
+message DateTime {
+  int32 date = 1;
+  int32 month = 2;
+  int32 year = 3;
+}
